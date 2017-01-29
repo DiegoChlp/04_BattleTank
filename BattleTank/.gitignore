@@ -66,5 +66,5 @@ DerivedDataCache/*
 # Starter Content
 Content/StarterContent/*
 
-# Tank Parts
-Tank Parts/*
+# Battle Ground
+Content/BattleGround_BuiltData.uasset
