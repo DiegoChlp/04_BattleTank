@@ -68,3 +68,6 @@ Content/StarterContent/*
 
 # Battle Ground
 Content/BattleGround_BuiltData.uasset
+
+# Don't ignore new Levels
+!Content/_Levels/*
