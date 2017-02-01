@@ -71,3 +71,6 @@ Content/BattleGround_BuiltData.uasset
 
 # Don't ignore new Levels
 !Content/_Levels/*
+
+# Don't ignore .cpp and .h files
+!Source/BattleTank/*
