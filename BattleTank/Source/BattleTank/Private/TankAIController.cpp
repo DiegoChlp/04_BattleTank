@@ -16,11 +16,24 @@ void ATankAIController::BeginPlay() {
 	}
 }
 
-ATank* ATankAIController::GetControlledTank() const {
+void ATankAIController::Tick(float DeltaTime) {
+	Super::Tick(DeltaTime);
+	if (GetPlayerTank()) {
+		// TODO Move toward the player
+
+		// Aim towards the player
+		GetControlledTank()->AimAt(GetPlayerTank()->GetActorLocation());
+
+		// Fire if ready
+	}
+	//UE_LOG(LogTemp, Warning, TEXT("Player controller ticking"));
+}
+
+ATank* ATankAIController::GetControlledTank() const { // AI
 	return Cast<ATank>(GetPawn());
 }
 
-ATank* ATankAIController::GetPlayerTank() const {
+ATank* ATankAIController::GetPlayerTank() const { // Me
 	auto PlayerPawn = GetWorld()->GetFirstPlayerController()->GetPawn();
 	if (!PlayerPawn) { return nullptr; }
 	return Cast<ATank>(PlayerPawn);
