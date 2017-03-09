@@ -3,7 +3,6 @@
 #include "BattleTank.h"
 #include "Public/Tank.h"
 
-
 // Sets default values
 ATank::ATank()
 {
@@ -14,7 +13,7 @@ ATank::ATank()
 	TankAimingComponent = CreateDefaultSubobject<UTankAimingComponent>(FName("Aiming Component"));
 }
 
-void ATank::SetBarrelReference(UStaticMeshComponent* BarrelToSet) {
+void ATank::SetBarrelReference(UTankBarrel* BarrelToSet) {
 	TankAimingComponent->SetBarrelReference(BarrelToSet);
 }
 
