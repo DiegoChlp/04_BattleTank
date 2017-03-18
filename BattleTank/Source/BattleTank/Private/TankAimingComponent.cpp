@@ -2,6 +2,7 @@
 
 #include "BattleTank.h"
 #include "Public/TankBarrel.h"
+#include "Public/TankTurret.h"
 #include "Public/TankAimingComponent.h"
 
 
@@ -16,7 +17,13 @@ UTankAimingComponent::UTankAimingComponent() {
 }
 
 void UTankAimingComponent::SetBarrelReference(UTankBarrel* BarrelToSet) {
+	if (!BarrelToSet) { return; }
 	Barrel = BarrelToSet;
+}
+
+void UTankAimingComponent::SetTurretReference(UTankTurret* TurretToSet) {
+	if (!TurretToSet) { return; }
+	Turret = TurretToSet;
 }
 
 void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed) {
