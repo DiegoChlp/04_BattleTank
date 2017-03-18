@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "BattleTank.h"
+#include "Public/TankAimingComponent.h"
 #include "Public/Tank.h"
 
 // Sets default values
